@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <title>Ingeniería Eléctrica AC S.A.S</title>
+
+    <meta
+      name="description"
+      content="Servicios eléctricos en Villavicencio. Instalaciones, 
+      mantenimiento residencial, comercial e industrial."/>
+      
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: Helvetica;
+        margin: 0;
+        background: linear-gradient(135deg, #eef2f7, #dfe9f3);
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+      }
+
+      /* LOGO FONDO */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 500px;
+        height: 500px;
+        background: url("logo.png") no-repeat center;
+        background-size: contain;
+        opacity: 0.05;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+
+      /* HEADER */
+      header {
+        background: linear-gradient(135deg, #2f5aa8, #1c3d73);
+        color: rgb(242, 210, 75);
+        padding: 25px;
+        text-align: center;
+      }
+
+      .header-contenido {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .logo {
+        width: 80px;
+        border-radius: 10px;
+      }
+
+      /* NAV */
+      nav {
+        background: #333;
+        padding: 10px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      nav.activo {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+      }
+
+      nav a {
+        position: relative;
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #2f5aa8;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+      }
+
+      nav a:hover::after {
+        width: 100%;
+      }
+
+      /* SECCIONES */
+      section {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        scroll-snap-align: start;
+      }
+
+      /* TITULOS */
+      h2 {
+        font-size: 28px;
+        border-left: 5px solid #2f5aa8;
+        padding-left: 10px;
+      }
+
+      /* CARDS */
+      .card {
+        background: white;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-left: 5px solid #2f5aa8;
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* FILA */
+      .fila {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      /* BOTONES */
+      .btn-principal {
+        background: #f2d24b;
+        color: black;
+        padding: 15px 25px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .btn-whatsapp {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 15px;
+        background: #25d366;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 15px;
+      }
+
+      .btn-email {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 18px;
+        background: #2f5aa8;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 10px;
+      }
+
+      /* WHATSAPP FLOTANTE */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        font-size: 25px;
+        padding: 15px;
+        border-radius: 50%;
+      }
+
+      /* ANIMACIÓN */
+      .animar {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: 0.8s;
+      }
+
+      .animar.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /*IMAGENES*/
+      .img-trabajo {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+        max-width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-contenido">
+        <img src="logo.png" class="logo" />
+        <div>
+          <h1>Ingeniería Eléctrica AC S.A.S</h1>
+          <p>Soluciones eléctricas profesionales</p>
+          <a href="#contacto" class="btn-principal">Solicita tu servicio</a>
+        </div>
+      </div>
+    </header>
+
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio" class="animar">
+      <h2>Bienvenidos</h2>
+      <p>
+        En Ingeniería Eléctrica AC S.A.S ofrecemos soluciones eléctricas
+        confiables y seguras para hogares, comercios e industrias. Contamos con
+        personal capacitado y experiencia en instalaciones, mantenimiento y
+        redes eléctricas, garantizando siempre un trabajo de calidad. Nuestro
+        compromiso es brindar un servicio eficiente, seguro y acorde a las
+        necesidades de cada cliente, cumpliendo con las normas técnicas y
+        ofreciendo resultados duraderos.
+      </p>
+
+      <div class="fila">
+        <div class="card">
+          <h3>Misión</h3>
+          <p>
+            Brindar un servicio eléctrico optimo y de calidad, garantizando la
+            satisfacción en cada servicio, generando confianza y fidelidad en
+            nuestros clientes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Visión</h3>
+          <p>
+            Convertirnos en una empresa líder a nivel nacional, reconocidos por
+            nuestra excelencia, innovación y calidad humana.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="animar">
+      <h2>Servicios</h2>
+
+      <details class="card">
+        <summary>
+          <i class="fas fa-home"></i> Instalaciones y mantenimiento residencial
+        </summary>
+        <p>
+          Realizamos instalaciones eléctricas completas en viviendas, incluyendo
+          cableado, tomas, iluminación y tableros eléctricos. También ofrecemos
+          mantenimiento preventivo y correctivo para garantizar el buen
+          funcionamiento y la seguridad del sistema eléctrico en el hogar.
+        </p>
+      </details>
+
+      <details class="card">
+        <summary>
+          <i class="fas fa-building"></i> Instalaciones y mantenimiento
+          comercial
+        </summary>
+        <p>
+          Brindamos soluciones eléctricas para locales comerciales, oficinas y
+          negocios. Instalamos sistemas eléctricos eficientes, iluminación
+          adecuada y realizamos mantenimiento para evitar fallas que afecten la
+          operación del negocio.
+        </p>
+      </details>
+
+      <details class="card">
+        <summary>
+          <i class="fas fa-industry"></i> Instalaciones y mantenimiento
+          industrial
+        </summary>
+        <p>
+          Ejecutamos proyectos eléctricos industriales, incluyendo montaje de
+          redes, tableros y sistemas de distribución. Realizamos mantenimiento
+          especializado para asegurar la continuidad operativa y cumplir con
+          normas técnicas de seguridad.
+        </p>
+      </details>
+    </section>
+
+    <section id="trabajos" class="animar">
+      <h2>Trabajos</h2>
+
+      <details class="card">
+        <summary>
+          <i class="fas fa-home"></i> Proyectos residenciales e instalación
+          completa
+        </summary>
+        <p>
+          Se realiza instalación eléctrica completa en vivienda, cumpliendo
+          normas de seguridad.
+        </p>
+        <img src="casa 1.jpeg" class="img-trabajo" />
+        <img src="casa 2.jpeg" class="img-trabajo" />
+        <img src="casa 3.jpeg" class="img-trabajo" />
+        <img src="casa 4.jpeg" class="img-trabajo" />
+        <img src="casa 5.jpeg" class="img-trabajo" />
+        <img src="casa 6.jpeg" class="img-trabajo" />
+        <img src="casa 7.jpeg" class="img-trabajo" />
+      </details>
+
+      <details class="card">
+        <summary>
+          <i class="fas fa-building"></i> Proyectos y Mantenimientos Comerciales
+        </summary>
+        <p>
+          Se lleva a cabo instalación eléctrica en local comercial, garantizando
+          eficiencia y seguridad.
+        </p>
+        <img src="comercio 1.jpeg" class="img-trabajo" />
+        <img src="comercio 2.jpeg" class="img-trabajo" />
+        <img src="comercio 3.jpeg" class="img-trabajo" />
+        <img src="comercio 4.jpeg" class="img-trabajo" />
+      </details>
+
+      <details class="card">
+        <summary>
+          <i class="fas fa-industry"></i> Proyectos y Mantenimientos
+          Industriales
+        </summary>
+        <p>
+          Se realiza instalación eléctrica en planta industrial, cumpliendo con
+          normas técnicas y de seguridad.
+        </p>
+        <img src="industrial 1.jpeg" class="img-trabajo" />
+        <img src="industrial 2.jpeg" class="img-trabajo" />
+        <img src="industrial 3.jpeg" class="img-trabajo" />
+        <img src="industrial 4.jpeg" class="img-trabajo" />
+      </details>
+    </section>
+
+    <section id="contacto" class="animar">
+      <h2>Contactanos</h2>
+
+      <a href="https://wa.me/573218038483" target="_blank" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+
+      <br />
+
+      <a href="mailto:corporativo3215@gmail.com" class="btn-email">
+        <i class="fas fa-envelope"></i> Enviar correo
+      </a>
+    </section>
+
+    <footer>
+      <p>WhatsApp: 321 803 8483</p>
+      <p>
+        © 2026 Ingeniería Eléctrica AC S.A.S - Todos los derechos reservados
+      </p>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE -->
+    <a href="https://wa.me/573218038483" target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      const elementos = document.querySelectorAll(".animar");
+
+      window.addEventListener("scroll", () => {
+        elementos.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          if (top < window.innerHeight - 50) {
+            el.classList.add("visible");
+          }
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        nav.classList.toggle("activo", window.scrollY > 50);
+      });
+    </script>
+  </body>
+</html>
