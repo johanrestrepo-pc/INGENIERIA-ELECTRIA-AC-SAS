@@ -246,7 +246,7 @@
       <a href="#contacto">Contacto</a>
     </nav>
     
-    <--imagenes iniciasles-->
+    <!-- imagenes iniciasles -->
       
     <section class="slider">
       <div class="slides">
@@ -432,6 +432,10 @@
       index = (index + 1) % slides.length;
       slides[index].classList.add("activo");
     }, 3000);
+   .slides img.activo {
+    opacity: 1;
+        }
+      
     </script>
   </body>
 </html>
