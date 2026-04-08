@@ -131,6 +131,35 @@
         padding: 20px;
         scroll-snap-align: start;
       }
+        .texto-slider {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          text-align: center;
+          z-index: 10;
+        }
+        
+        .texto-slider h2 {
+          font-size: 40px;
+          margin-bottom: 10px;
+        }
+        
+        .texto-slider p {
+          font-size: 18px;
+        }
+
+          .slider::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+          }
+      
 
       /* TITULOS */
       h2 {
@@ -225,6 +254,7 @@
         margin-top: 10px;
         max-width: 300px;
       }
+      
     </style>
   </head>
 
@@ -251,6 +281,9 @@
     
     <section class="slider">
       <div class="slides">
+        <div class="texto-slider">
+        <h2>Damos luz a lo que más importa</h2>
+        <p>Soluciones eléctricas seguras y profesionales</p>
         <img src="casa5.jpeg" class="activo">
         <img src="comercio3.jpeg">
         <img src="industrial1.jpeg">
