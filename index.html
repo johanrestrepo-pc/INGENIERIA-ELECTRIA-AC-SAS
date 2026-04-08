@@ -19,6 +19,24 @@
       html {
         scroll-behavior: smooth;
       }
+      .slider {
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .slides img {
+        width: 100%;
+        height: 90vh;
+        object-fit: cover;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      
+      .slides img.activo {
+        opacity: 1;
 
       body {
         font-family: Helvetica;
@@ -227,6 +245,16 @@
       <a href="#trabajos">Trabajos</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    
+    <--imagenes iniciasles-->
+      
+    <section class="slider">
+      <div class="slides">
+        <img src="casa 5.jpeg" class="activo">
+        <img src="comercio 3.jpeg">
+        <img src="industrial 1.jpeg">
+      </div>
+    </section>
 
     <section id="inicio" class="animar">
       <h2>Bienvenidos</h2>
@@ -394,6 +422,15 @@
         const nav = document.querySelector("nav");
         nav.classList.toggle("activo", window.scrollY > 50);
       });
+    <script>
+    let slides = document.querySelectorAll(".slides img");
+    let index = 0;
+    
+    setInterval(() => {
+      slides[index].classList.remove("activo");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("activo");
+    }, 3000);
     </script>
   </body>
 </html>
