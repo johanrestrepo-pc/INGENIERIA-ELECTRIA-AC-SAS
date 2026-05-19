@@ -1,434 +1,455 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  scroll-behavior: smooth;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Segoe UI',Arial,sans-serif;
+  scroll-behavior:smooth;
 }
 
-body {
-  background: #f4f6f9;
-  overflow-x: hidden;
+body{
+  background:#f4f6f9;
+  overflow-x:hidden;
 }
 
 /* =========================
    NAVBAR
 ========================= */
 
-.nav {
-  width: 100%;
-  background: rgba(10, 10, 10, 0.95);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+.nav{
+  width:100%;
+  background:rgba(10,10,10,0.95);
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
 
-  padding: 18px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  padding:18px 50px;
+
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 /* LOGO */
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:15px;
 }
 
-.logo-img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border-radius: 50%;
+.logo-img{
+  width:65px;
+  height:65px;
+  object-fit:contain;
+  border-radius:50%;
 }
 
-.logo h2 {
-  color: white;
-  font-size: 24px;
-  font-weight: 700;
+.logo h2{
+  color:white;
+  font-size:28px;
+  font-weight:700;
 }
 
 /* MENU */
 
-.menu {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+.menu{
+  display:flex;
+  align-items:center;
+  gap:35px;
 }
 
-.menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  transition: 0.3s;
-  position: relative;
+.menu a{
+  color:white;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  transition:0.3s;
+  position:relative;
 }
 
-.menu a:hover {
-  color: #f2d24b;
+.menu a:hover{
+  color:#f2d24b;
 }
 
-.menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 0%;
-  height: 2px;
-  background: #f2d24b;
-  transition: 0.3s;
+.menu a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-8px;
+
+  width:0%;
+  height:2px;
+
+  background:#f2d24b;
+  transition:0.3s;
 }
 
-.menu a:hover::after {
-  width: 100%;
+.menu a:hover::after{
+  width:100%;
 }
 
 /* =========================
    HERO
 ========================= */
 
-.hero {
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
+.hero{
+  height:100vh;
+  position:relative;
+  overflow:hidden;
 }
 
-.slides img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.slides img{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 
-  opacity: 0;
-  transition: opacity 1.5s ease;
+  opacity:0;
+  transition:opacity 1.5s ease;
 }
 
-.slides img.activo {
-  opacity: 1;
+.slides img.activo{
+  opacity:1;
 }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.overlay{
+  position:absolute;
+  width:100%;
+  height:100%;
 
-  background: linear-gradient(
+  background:linear-gradient(
     to bottom,
     rgba(0,0,0,0.55),
-    rgba(0,0,0,0.75)
+    rgba(0,0,0,0.80)
   );
 
-  z-index: 2;
+  z-index:2;
 }
 
-.hero-text {
-  position: absolute;
-  z-index: 3;
+.hero-text{
+  position:absolute;
+  z-index:3;
 
-  top: 50%;
-  left: 50%;
+  top:50%;
+  left:50%;
 
-  transform: translate(-50%, -50%);
-  text-align: center;
+  transform:translate(-50%, -50%);
 
-  width: 90%;
-  max-width: 850px;
+  text-align:center;
+  color:white;
 
-  color: white;
+  width:90%;
+  max-width:900px;
 }
 
-.hero-text h1 {
-  font-size: 70px;
-  line-height: 1.1;
-  margin-bottom: 25px;
+.hero-text h1{
+  font-size:72px;
+  line-height:1.1;
+  margin-bottom:25px;
 }
 
-.hero-text p {
-  font-size: 24px;
-  margin-bottom: 35px;
-  opacity: 0.9;
+.hero-text p{
+  font-size:26px;
+  margin-bottom:35px;
+  opacity:0.95;
 }
 
 /* BOTON */
 
-.btn {
-  display: inline-block;
+.btn{
+  display:inline-block;
 
-  background: #f2d24b;
-  color: black;
+  background:#f2d24b;
+  color:black;
 
-  padding: 18px 38px;
+  padding:18px 40px;
 
-  border-radius: 10px;
-  text-decoration: none;
+  border-radius:12px;
 
-  font-weight: bold;
-  font-size: 18px;
+  text-decoration:none;
 
-  transition: 0.3s;
+  font-weight:bold;
+  font-size:20px;
+
+  transition:0.3s;
 }
 
-.btn:hover {
-  background: #ffd900;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+.btn:hover{
+  background:#ffd900;
+  transform:translateY(-5px);
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* =========================
    SECCIONES
 ========================= */
 
-.section {
-  padding: 140px 60px;
-  max-width: 1300px;
-  margin: auto;
-  text-align: center;
+.section{
+  padding:140px 60px;
+  max-width:1300px;
+  margin:auto;
+  text-align:center;
 }
 
-.section h2 {
-  font-size: 58px;
-  margin-bottom: 25px;
-  color: #111;
+.section h2{
+  font-size:60px;
+  margin-bottom:25px;
+  color:#111;
 }
 
-.section p {
-  font-size: 22px;
-  line-height: 1.8;
-  color: #555;
+.section p{
+  font-size:22px;
+  line-height:1.8;
+  color:#555;
 }
 
 /* =========================
    SERVICIOS
 ========================= */
 
-.grid {
-  margin-top: 70px;
+.grid{
+  margin-top:70px;
 
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  gap:35px;
+  flex-wrap:wrap;
 }
 
-.card {
-  background: white;
+.card{
+  background:white;
 
-  width: 360px;
+  width:360px;
 
-  padding: 50px 35px;
+  padding:50px 35px;
 
-  border-radius: 25px;
+  border-radius:25px;
 
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
 
-  transition: 0.4s;
+  transition:0.4s;
 }
 
-.card:hover {
-  transform: translateY(-15px);
+.card:hover{
+  transform:translateY(-15px);
 }
 
-.card i {
-  font-size: 55px;
-  color: #2f5aa8;
-  margin-bottom: 25px;
+.card i{
+  font-size:55px;
+  color:#2f5aa8;
+  margin-bottom:25px;
 }
 
-.card h3 {
-  font-size: 30px;
-  margin-bottom: 18px;
-  color: #111;
+.card h3{
+  font-size:30px;
+  margin-bottom:18px;
+  color:#111;
 }
 
-.card p {
-  font-size: 18px;
-  color: #666;
+.card p{
+  font-size:18px;
+  color:#666;
 }
 
 /* =========================
    GALERIA
 ========================= */
 
-.galeria {
-  margin-top: 70px;
+.galeria{
+  margin-top:70px;
 
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
 }
 
-.galeria img {
-  width: 380px;
-  height: 280px;
+.galeria img{
+  width:380px;
+  height:280px;
 
-  object-fit: cover;
+  object-fit:cover;
 
-  border-radius: 20px;
+  border-radius:20px;
 
-  transition: 0.4s;
+  transition:0.4s;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-.galeria img:hover {
-  transform: scale(1.05);
+.galeria img:hover{
+  transform:scale(1.05);
 }
 
 /* =========================
    CTA
 ========================= */
 
-.cta {
-  padding: 140px 30px;
+.cta{
+  padding:140px 30px;
 
-  background: linear-gradient(
+  background:linear-gradient(
     135deg,
     #2f5aa8,
     #17386d
   );
 
-  text-align: center;
-  color: white;
+  text-align:center;
+  color:white;
 }
 
-.cta h2 {
-  font-size: 60px;
-  margin-bottom: 20px;
+.cta h2{
+  font-size:60px;
+  margin-bottom:20px;
 }
 
-.cta p {
-  font-size: 24px;
-  margin-bottom: 35px;
+.cta p{
+  font-size:24px;
+  margin-bottom:35px;
 }
 
 /* =========================
    CONTACTO
 ========================= */
 
-.contacto {
-  background: #fff;
+.contacto{
+  background:white;
 }
 
-.contacto-box {
-  margin-top: 50px;
+.contacto-box{
+  margin-top:50px;
 }
 
-.contacto-box p {
-  margin-bottom: 15px;
-  font-size: 22px;
+.contacto-box p{
+  margin-bottom:18px;
+  font-size:24px;
+  color:#444;
 }
 
 /* =========================
    FOOTER
 ========================= */
 
-.footer {
-  background: #0c0c0c;
-  color: white;
+.footer{
+  background:#0c0c0c;
+  color:white;
 
-  text-align: center;
+  text-align:center;
 
-  padding: 30px;
+  padding:30px;
 }
 
-.footer p {
-  font-size: 16px;
-  opacity: 0.8;
+.footer p{
+  font-size:16px;
+  opacity:0.8;
 }
 
 /* =========================
    WHATSAPP
 ========================= */
 
-.whatsapp {
-  position: fixed;
+.whatsapp{
+  position:fixed;
 
-  right: 25px;
-  bottom: 25px;
+  right:25px;
+  bottom:25px;
 
-  width: 70px;
-  height: 70px;
+  width:70px;
+  height:70px;
 
-  background: #25d366;
-  color: white;
+  background:#25d366;
+  color:white;
 
-  border-radius: 50%;
+  border-radius:50%;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 
-  text-decoration: none;
+  text-decoration:none;
 
-  font-size: 35px;
+  font-size:35px;
 
-  z-index: 999;
+  z-index:999;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
 
-  transition: 0.3s;
+  transition:0.3s;
 }
 
-.whatsapp:hover {
-  transform: scale(1.1);
+.whatsapp:hover{
+  transform:scale(1.1);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media(max-width: 900px) {
+@media(max-width:900px){
 
-  .nav {
-    padding: 15px 20px;
+  .nav{
+    padding:15px 20px;
+    flex-direction:column;
+    gap:15px;
   }
 
-  .logo h2 {
-    font-size: 18px;
+  .logo{
+    justify-content:center;
   }
 
-  .menu {
-    gap: 15px;
+  .logo-img{
+    width:50px;
+    height:50px;
   }
 
-  .menu a {
-    font-size: 15px;
+  .logo h2{
+    font-size:18px;
+    text-align:center;
   }
 
-  .hero-text h1 {
-    font-size: 42px;
+  .menu{
+    gap:18px;
+    flex-wrap:wrap;
+    justify-content:center;
   }
 
-  .hero-text p {
-    font-size: 18px;
+  .menu a{
+    font-size:15px;
   }
 
-  .section {
-    padding: 100px 20px;
+  .hero-text h1{
+    font-size:42px;
   }
 
-  .section h2 {
-    font-size: 40px;
+  .hero-text p{
+    font-size:18px;
   }
 
-  .card {
-    width: 100%;
+  .section{
+    padding:100px 20px;
   }
 
-  .galeria img {
-    width: 100%;
-    height: auto;
+  .section h2{
+    font-size:40px;
   }
 
-  .cta h2 {
-    font-size: 38px;
+  .card{
+    width:100%;
   }
+
+  .galeria img{
+    width:100%;
+    height:auto;
+  }
+
+  .cta h2{
+    font-size:38px;
+  }
+
 }
